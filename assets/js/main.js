@@ -7,13 +7,11 @@
  */
 
 function send() {
-  // Retrieve form data
   var name = document.getElementById("name").value;
   var email = document.getElementById("email").value;
   var subject = document.getElementById("subject").value;
   var message = document.getElementById("message").value;
 
-  // Perform validation
   if (name.trim() === "") {
     alert("Please enter your name");
     return;
@@ -31,7 +29,6 @@ function send() {
     return;
   }
 
-  // If all fields are valid, proceed with sending email
   var params = {
     name: name,
     email: email,
@@ -39,8 +36,8 @@ function send() {
     message: message,
   };
 
-  const serviceID = "service_9sfak9g";
-  const templateID = "template_92agcrr";
+  const serviceID = "service_bb5cmn7";
+  const templateID = "template_b0sjxa7";
 
   emailjs
     .send(serviceID, templateID, params)
